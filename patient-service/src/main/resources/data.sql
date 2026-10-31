@@ -35,7 +35,7 @@ SELECT '123e4567-e89b-12d3-a456-426614174001',
 INSERT INTO patient (id, name, email, address, date_of_birth, registered_date)
 SELECT '123e4567-e89b-12d3-a456-426614174002',
        'Killer Monster',
-       'Killer.Monster@example.com',
+       'killer.monster@example.com',
        'Zum Luftschacht 9, 44585 Dortmund',
        '2008-03-12',
        '2022-06-20'
