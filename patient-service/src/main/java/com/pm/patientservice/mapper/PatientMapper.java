@@ -12,10 +12,10 @@ public class PatientMapper {
     public static PatientResponseDTO toDTO (Patient patient) {
         PatientResponseDTO dto = new PatientResponseDTO();
         dto.setId(patient.getId().toString());
-        dto.setId(patient.getName());
-        dto.setId(patient.getAddress());
-        dto.setId(patient.getEmail());
-        dto.setId(patient.getDateOfBirth().toString());
+        dto.setName(patient.getName());
+        dto.setAddress(patient.getAddress());
+        dto.setEmail(patient.getEmail());
+        dto.setDateOfBirth(patient.getDateOfBirth().toString());
         return dto;
     }
 
