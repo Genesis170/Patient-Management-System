@@ -4,9 +4,10 @@ import billing.BillingRequest;
 import billing.BillingResponse;
 import billing.BillingServiceGrpc.BillingServiceImplBase;
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.grpc.server.service.GrpcService;
+
 
 @GrpcService
 public class BillingGrpcService extends BillingServiceImplBase {
@@ -17,9 +18,9 @@ public class BillingGrpcService extends BillingServiceImplBase {
     public void createBillingAccount(BillingRequest billingRequest,
                                      StreamObserver<BillingResponse> responseObserver) {
 
-        log.info("createBillingAccount request received {}",  billingRequest.toString());
+        System.out.println("REQUEST ERHAALLLLTEEEEENNNNN!!!!");
 
-        // Business logic
+        log.info("createBillingAccount request received {}", billingRequest);
 
         BillingResponse response = BillingResponse.newBuilder()
                 .setAccountId("123")
@@ -28,7 +29,5 @@ public class BillingGrpcService extends BillingServiceImplBase {
 
         responseObserver.onNext(response);
         responseObserver.onCompleted();
-
     }
-
 }
