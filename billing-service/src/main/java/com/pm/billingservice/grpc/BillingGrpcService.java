@@ -20,7 +20,7 @@ public class BillingGrpcService extends BillingServiceImplBase {
 
         System.out.println("REQUEST ERHAALLLLTEEEEENNNNN!!!!");
 
-        log.info("createBillingAccount request received {}", billingRequest);
+        log.info("createBillingAccount request received  {}", billingRequest);
 
         BillingResponse response = BillingResponse.newBuilder()
                 .setAccountId("123")
